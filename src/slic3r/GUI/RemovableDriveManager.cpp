@@ -23,7 +23,9 @@
 #include <boost/filesystem.hpp>
 #include <boost/system/error_code.hpp>
 #include <boost/filesystem/convenience.hpp>
+#ifndef __OpenBSD__
 #include <boost/process.hpp>
+#endif
 #endif
 
 namespace Slic3r {
