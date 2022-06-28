@@ -2,6 +2,9 @@
 #include <vector>
 #include <string>
 #include <boost/filesystem.hpp>
+#ifdef __OpenBSD__
+#  include <boost/filesystem/fstream.hpp>
+#endif
 #include <boost/dll.hpp>
 #include <boost/property_tree/ini_parser.hpp>
 #include <boost/nowide/fstream.hpp>

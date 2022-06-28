@@ -140,6 +140,24 @@ static int run_script(const std::string &script, const std::string &gcode, std::
     return (int)execute_process_winapi(command_line);
 }
 
+#elif __OpenBSD__
+
+#include <cstdlib>
+
+static int run_script(const std::string &script, const std::string &gcode, std::string &std_err)
+{
+    // Quote and escape the gcode path argument
+    std::string command { script };
+    command.append(" '");
+    for (char c : gcode) {
+        if (c == '\'') { command.append("'\\''"); }
+        else { command.push_back(c); }
+    }
+    command.push_back('\'');
+
+    return system(command.c_str());
+}
+
 #else
     // POSIX
 

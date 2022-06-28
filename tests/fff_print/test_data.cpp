@@ -12,6 +12,9 @@
 
 #include <boost/nowide/cstdio.hpp>
 #include <boost/filesystem.hpp>
+#ifdef __OpenBSD__
+#  include <boost/filesystem/fstream.hpp>
+#endif
 #include <libslic3r/ModelArrange.hpp>
 
 using namespace std;

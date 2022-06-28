@@ -29,7 +29,10 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(libnest2d)
 add_subdirectory(libslic3r)
-add_subdirectory(slic3rutils)
+if (SLIC3R_GUI)
+    # XXX remove conditional when build with GUI is working
+    add_subdirectory(slic3rutils)
+endif ()
 add_subdirectory(fff_print)
 add_subdirectory(sla_print)
 add_subdirectory(cpp17 EXCLUDE_FROM_ALL)    # does not have to be built all the time
