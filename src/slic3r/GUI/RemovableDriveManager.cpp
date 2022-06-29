@@ -264,6 +264,19 @@ std::vector<DriveData> RemovableDriveManager::search_for_removable_drives() cons
 	return current_drives;
 }
 
+#ifdef __OpenBSD__
+
+// Called from UI therefore it blocks the UI thread.
+// It also blocks updates at the worker thread.
+// OpenBSD implementation.
+void RemovableDriveManager::eject_drive()
+{
+	// XXX implement me
+	return;
+}
+
+#else
+
 // Called from UI therefore it blocks the UI thread.
 // It also blocks updates at the worker thread.
 // Unix & OSX implementation.
@@ -353,6 +366,8 @@ void RemovableDriveManager::eject_drive()
 	);
 #endif // __APPLE__
 }
+
+#endif
 
 std::string RemovableDriveManager::get_removable_drive_path(const std::string &path)
 {
