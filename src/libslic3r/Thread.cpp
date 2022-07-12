@@ -5,6 +5,9 @@
 	// any posix system
 	#include <pthread.h>
 #endif
+#ifdef __OpenBSD__
+	#include <pthread_np.h>
+#endif
 
 #include <atomic>
 #include <condition_variable>
@@ -160,22 +163,27 @@ std::optional<std::string> get_current_thread_name()
 
 bool set_thread_name(std::thread &thread, const char *thread_name)
 {
-	return false;
+	pthread_set_name_np(thread.native_handle(), thread_name);
+	return true;
 }
 
 bool set_thread_name(boost::thread &thread, const char *thread_name)
 {
-	return false;
+	pthread_set_name_np(thread.native_handle(), thread_name);
+	return true;
 }
 
 bool set_current_thread_name(const char *thread_name)
 {
-	return false;
+	pthread_set_name_np(pthread_self(), thread_name);
+	return true;
 }
 
 std::optional<std::string> get_current_thread_name()
 {
-	return std::nullopt;
+	char buf[16];
+	pthread_get_name_np(pthread_self(), buf, 16);
+	return std::string(buf);
 }
 
 #else
