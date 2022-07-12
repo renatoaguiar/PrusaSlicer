@@ -264,7 +264,7 @@ target_link_libraries(libslic3r_gui libslic3r avrdude imgui GLEW::GLEW OpenGL::G
 
 if (MSVC)
     target_link_libraries(libslic3r_gui Setupapi.lib)
-elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
     target_link_libraries(libslic3r_gui ${DBUS_LIBRARIES}) 
 elseif (APPLE)
     target_link_libraries(libslic3r_gui ${DISKARBITRATION_LIBRARY})

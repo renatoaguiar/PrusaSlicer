@@ -157,9 +157,7 @@ target_link_libraries(PrusaSlicer libslic3r_gui)
     elseif (APPLE)
         target_link_libraries(PrusaSlicer "-framework OpenGL")
     elseif (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
-        target_link_libraries(PrusaSlicer ${HIDAPI_LIBRARIES} dbus-1)
-        # XXX
-        # - use pkg-config for dbus-1
+#        target_link_libraries(PrusaSlicer ${HIDAPI_LIBRARIES})
     else ()
         target_link_libraries(PrusaSlicer -ldl)
     endif ()
