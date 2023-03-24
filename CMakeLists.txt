@@ -207,7 +207,7 @@ if (APPLE)
     endif ()
 endif ()
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
     find_package(PkgConfig REQUIRED)
 
     if (CMAKE_VERSION VERSION_LESS "3.1")
