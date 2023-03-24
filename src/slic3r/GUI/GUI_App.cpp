@@ -760,9 +760,11 @@ void GUI_App::post_init()
             this->mainframe->load_config(this->init_params->extra_config);
     }
 
+#ifndef __OpenBSD__
     // show "Did you know" notification
     if (app_config->get("show_hints") == "1" && ! is_gcode_viewer())
         plater_->get_notification_manager()->push_hint_notification(true);
+#endif
 
     // The extra CallAfter() is needed because of Mac, where this is the only way
     // to popup a modal dialog on start without screwing combo boxes.
@@ -2075,6 +2077,7 @@ bool GUI_App::load_language(wxString language, bool initial)
         {
 	    	// Allocating a temporary locale will switch the default wxTranslations to its internal wxTranslations instance.
 	    	wxLocale temp_locale;
+            temp_locale.Init(); // https://docs.wxwidgets.org/trunk/classwx_locale.html#ab536c2c82f72f70e7c15e1091eb9e5cf
 	    	// Set the current translation's language to default, otherwise GetBestTranslation() may not work (see the wxWidgets source code).
 	    	wxTranslations::Get()->SetLanguage(wxLANGUAGE_DEFAULT);
 	    	// Let the wxFileTranslationsLoader enumerate all translation dictionaries for PrusaSlicer
