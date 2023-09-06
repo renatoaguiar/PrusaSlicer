@@ -8,6 +8,7 @@
 		#include <pthread/qos.h>
 	#endif // __APPLE__
 #endif
+
 #ifdef __OpenBSD__
 	#include <pthread_np.h>
 #endif
