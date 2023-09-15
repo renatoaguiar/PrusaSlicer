@@ -105,7 +105,7 @@ if (SLIC3R_GUI)
     list(FILTER wxWidgets_LIBRARIES EXCLUDE REGEX OpenGL)
     
     if (UNIX AND NOT APPLE)
-        list(APPEND wxWidgets_LIBRARIES X11 wayland-client wayland-egl EGL)
+        list(APPEND wxWidgets_LIBRARIES X11 EGL)
     endif ()
 #    list(REMOVE_ITEM wxWidgets_LIBRARIES oleacc)
     message(STATUS "wx libs: ${wxWidgets_LIBRARIES}")
