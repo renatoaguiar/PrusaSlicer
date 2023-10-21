@@ -23,6 +23,7 @@ find_package(OpenCASCADE REQUIRED)
 
 set(OCCT_LIBS
     -L${CMAKE_INSTALL_PREFIX}/lib
+    -L/usr/X11R6/lib
     TKXDESTEP
     TKSTEP
     TKSTEP209
