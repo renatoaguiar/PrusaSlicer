@@ -1,10 +1,11 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include "libslic3r/BoundingBox.hpp"
 #include "libslic3r/AStar.hpp"
 #include "libslic3r/Execution/ExecutionSeq.hpp"
 #include "libslic3r/PointGrid.hpp"
 
+using namespace Catch;
 using namespace Slic3r;
 
 TEST_CASE("Testing basic invariants of AStar", "[AStar]") {

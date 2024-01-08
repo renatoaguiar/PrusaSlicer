@@ -572,13 +572,12 @@ find_package(JPEG REQUIRED)
 target_link_libraries(libslic3r
     libnest2d
     admesh
-    libcereal
     libigl
     miniz
     boost_libs
     clipper
     nowide
-    libexpat
+    expat
     glu-libtess
     qhull
     semver

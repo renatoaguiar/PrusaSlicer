@@ -1,8 +1,9 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include "libslic3r/PlaceholderParser.hpp"
 #include "libslic3r/PrintConfig.hpp"
 
+using namespace Catch;
 using namespace Slic3r;
 
 SCENARIO("Placeholder parser scripting", "[PlaceholderParser]") {

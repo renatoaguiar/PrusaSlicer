@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 #include <test_utils.hpp>
 
 #include <random>
@@ -8,6 +8,7 @@
 #include <libslic3r/SVG.hpp>
 #include <libslic3r/libslic3r.h>
 
+using namespace Catch;
 using namespace Slic3r;
 
 TEST_CASE("arc basics", "[ArcWelder]") {

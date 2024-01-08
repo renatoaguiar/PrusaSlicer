@@ -1,11 +1,12 @@
 #include <algorithm>
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 #include <test_utils.hpp>
 
 #include <libslic3r/TriangleMesh.hpp>
 #include <libslic3r/AABBTreeIndirect.hpp>
 #include <libslic3r/AABBTreeLines.hpp>
 
+using namespace Catch;
 using namespace Slic3r;
 
 TEST_CASE("Building a tree over a box, ray caster and closest query", "[AABBIndirect]")

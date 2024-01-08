@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include <iostream>
 #include <boost/filesystem.hpp>
@@ -7,6 +7,7 @@
 #include "libslic3r/ExPolygon.hpp"
 #include "libslic3r/SVG.hpp"
 
+using namespace Catch;
 using namespace Slic3r;
 
 // #define TESTS_EXPORT_SVGS

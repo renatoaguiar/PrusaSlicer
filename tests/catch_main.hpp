@@ -4,8 +4,9 @@
 #define CATCH_CONFIG_EXTERNAL_INTERFACES
 #define CATCH_CONFIG_MAIN
 // #define CATCH_CONFIG_DEFAULT_REPORTER "verboseconsole"
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
+#if 0 // TODO make this work with catch2
 namespace Catch {
 struct VerboseConsoleReporter : public ConsoleReporter {
     double duration = 0.;
@@ -50,5 +51,6 @@ struct VerboseConsoleReporter : public ConsoleReporter {
 CATCH_REGISTER_REPORTER( "verboseconsole", VerboseConsoleReporter )
 
 } // namespace Catch
+#endif
 
 #endif // CATCH_MAIN

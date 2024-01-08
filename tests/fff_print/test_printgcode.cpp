@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include "libslic3r/libslic3r.h"
 #include "libslic3r/GCodeReader.hpp"
@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <boost/regex.hpp>
 
+using namespace Catch;
 using namespace Slic3r;
 using namespace Slic3r::Test;
 

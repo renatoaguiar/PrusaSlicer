@@ -19,7 +19,7 @@
 #include "WifiScannerMac.h"
 #endif 
 
-#if __linux__
+#if __linux__ || defined(__OpenBSD__)
 #include <dbus/dbus.h> /* Pull in all of D-Bus headers. */
 #endif //__linux__
 

@@ -1,9 +1,10 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include <memory>
 
 #include "libslic3r/GCode.hpp"
 
+using namespace Catch;
 using namespace Slic3r;
 using namespace Slic3r::GCode::Impl;
 
@@ -22,7 +23,7 @@ SCENARIO("Origin manipulation", "[GCode]") {
     }
 }
 
-struct ApproxEqualsPoints : public Catch::MatcherBase<Points> {
+struct ApproxEqualsPoints : public Catch::Matchers::MatcherBase<Points> {
     ApproxEqualsPoints(const Points& expected, unsigned tolerance): expected(expected), tolerance(tolerance) {}
     bool match(const Points& points) const override {
         if (points.size() != expected.size()) {

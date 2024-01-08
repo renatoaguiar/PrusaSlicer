@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include <numeric>
 #include <sstream>
@@ -10,6 +10,7 @@
 #include "libslic3r/Flow.hpp"
 #include "libslic3r/libslic3r.h"
 
+using namespace Catch;
 using namespace Slic3r::Test;
 using namespace Slic3r;
 

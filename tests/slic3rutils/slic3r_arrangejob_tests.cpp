@@ -1,4 +1,4 @@
-#include "catch2/catch.hpp"
+#include <catch2/catch_all.hpp>
 #include "test_utils.hpp"
 
 #include <random>
@@ -12,6 +12,8 @@
 #include "libslic3r/SLAPrint.hpp"
 
 #include "libslic3r/Format/3mf.hpp"
+
+using namespace Catch;
 
 class RandomArrangeSettings: public Slic3r::arr2::ArrangeSettingsView {
     Slic3r::arr2::ArrangeSettingsDb::Values m_v;

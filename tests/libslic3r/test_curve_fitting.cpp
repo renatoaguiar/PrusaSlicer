@@ -1,9 +1,11 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 #include <test_utils.hpp>
 
 #include <libslic3r/Geometry/Curves.hpp>
 #include <libslic3r/Utils.hpp>
 #include <libslic3r/SVG.hpp>
+
+using namespace Catch;
 
 TEST_CASE("Curves: cubic b spline fit test", "[Curves]") {
     using namespace Slic3r;

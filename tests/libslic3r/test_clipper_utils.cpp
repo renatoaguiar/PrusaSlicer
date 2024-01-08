@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <catch2/catch_all.hpp>
 
 #include <numeric>
 #include <iostream>
@@ -8,6 +8,7 @@
 #include "libslic3r/ExPolygon.hpp"
 #include "libslic3r/SVG.hpp"
 
+using namespace Catch;
 using namespace Slic3r;
 
 SCENARIO("Various Clipper operations - xs/t/11_clipper.t", "[ClipperUtils]") {
