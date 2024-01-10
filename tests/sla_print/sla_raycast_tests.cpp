@@ -6,7 +6,7 @@
 
 #include "sla_test_utils.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 // First do a simple test of the hole raycaster.

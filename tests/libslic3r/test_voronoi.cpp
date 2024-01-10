@@ -340,7 +340,7 @@ TEST_CASE("Voronoi division by zero 12903", "[Voronoi]")
 // Funny sample from a dental industry?
 // Vojtech confirms this test fails and rightly so, because the input data contain self intersections.
 // This test is suppressed.
-TEST_CASE("Voronoi NaN coordinates 12139", "[Voronoi][!hide][!mayfail]")
+TEST_CASE("Voronoi NaN coordinates 12139", "[Voronoi][.][!mayfail]")
 {
     Lines lines = {
         { {  260500,1564400 }, { 261040,1562960 } },

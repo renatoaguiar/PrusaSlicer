@@ -7,7 +7,7 @@
 #include <libslic3r/Polygon.hpp>
 #include <libslic3r/SVG.cpp>
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 //#define DEBUG_TEMP_DIR "d:\\temp\\"

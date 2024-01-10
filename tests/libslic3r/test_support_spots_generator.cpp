@@ -2,7 +2,7 @@
 #include <catch2/catch_all.hpp>
 #include <libslic3r/SupportSpotsGenerator.hpp>
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 using namespace SupportSpotsGenerator;
 

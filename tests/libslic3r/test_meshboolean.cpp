@@ -4,7 +4,7 @@
 #include <libslic3r/TriangleMesh.hpp>
 #include <libslic3r/MeshBoolean.hpp>
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 TEST_CASE("CGAL and TriangleMesh conversions", "[MeshBoolean]") {

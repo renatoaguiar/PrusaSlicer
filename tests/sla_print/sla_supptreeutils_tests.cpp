@@ -7,7 +7,7 @@
 #include "libslic3r/SLA/SupportTreeUtils.hpp"
 #include "libslic3r/SLA/SupportTreeUtilsLegacy.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 
 // Test pair hash for 'nums' random number pairs.
 template <class I, class II> void test_pairhash()

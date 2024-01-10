@@ -8,7 +8,7 @@
 #include <libslic3r/SVG.hpp>
 #include <libslic3r/libslic3r.h>
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 TEST_CASE("arc basics", "[ArcWelder]") {

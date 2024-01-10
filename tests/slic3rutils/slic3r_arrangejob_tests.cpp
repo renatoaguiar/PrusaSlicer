@@ -13,7 +13,7 @@
 
 #include "libslic3r/Format/3mf.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 
 class RandomArrangeSettings: public Slic3r::arr2::ArrangeSettingsView {
     Slic3r::arr2::ArrangeSettingsDb::Values m_v;

@@ -5,7 +5,7 @@
 #include "libslic3r/Execution/ExecutionSeq.hpp"
 #include "libslic3r/PointGrid.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 TEST_CASE("Testing basic invariants of AStar", "[AStar]") {

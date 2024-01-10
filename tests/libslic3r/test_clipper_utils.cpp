@@ -8,7 +8,7 @@
 #include "libslic3r/ExPolygon.hpp"
 #include "libslic3r/SVG.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 SCENARIO("Various Clipper operations - xs/t/11_clipper.t", "[ClipperUtils]") {

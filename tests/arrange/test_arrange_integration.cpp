@@ -12,7 +12,7 @@
 #include "libslic3r/Format/3mf.hpp"
 #include "libslic3r/ModelArrange.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 
 static Slic3r::Model get_example_model_with_20mm_cube()
 {

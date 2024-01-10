@@ -40,7 +40,7 @@
 
 #include <random>
 
-using namespace Catch;
+using Catch::Approx;
 
 template<class ArrItem = Slic3r::arr2::ArrangeItem>
 static std::vector<ArrItem> prusa_parts(double infl = 0.) {

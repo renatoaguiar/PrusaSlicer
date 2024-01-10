@@ -3,7 +3,7 @@
 #include "libslic3r/PlaceholderParser.hpp"
 #include "libslic3r/PrintConfig.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 SCENARIO("Placeholder parser scripting", "[PlaceholderParser]") {

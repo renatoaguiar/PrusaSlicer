@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <boost/regex.hpp>
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 using namespace Slic3r::Test;
 

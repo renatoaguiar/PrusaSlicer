@@ -4,7 +4,7 @@
 #include "libslic3r/Polygon.hpp"
 #include "libslic3r/ExPolygon.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 static inline bool points_close(const Point &p1, const Point &p2)

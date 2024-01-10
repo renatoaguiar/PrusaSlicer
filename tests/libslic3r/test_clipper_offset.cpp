@@ -7,7 +7,7 @@
 #include "libslic3r/ExPolygon.hpp"
 #include "libslic3r/SVG.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 // #define TESTS_EXPORT_SVGS

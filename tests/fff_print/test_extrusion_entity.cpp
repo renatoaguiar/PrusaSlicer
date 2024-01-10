@@ -10,7 +10,7 @@
 
 #include "test_data.hpp"
 
-using namespace Catch;
+using Catch::Approx;
 using namespace Slic3r;
 
 static inline Slic3r::Point random_point(float LO=-50, float HI=50) 

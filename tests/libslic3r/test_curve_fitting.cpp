@@ -5,7 +5,7 @@
 #include <libslic3r/Utils.hpp>
 #include <libslic3r/SVG.hpp>
 
-using namespace Catch;
+using Catch::Approx;
 
 TEST_CASE("Curves: cubic b spline fit test", "[Curves]") {
     using namespace Slic3r;

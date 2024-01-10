@@ -9,7 +9,7 @@
 #include <libslic3r/SLA/SupportTreeMesher.hpp>
 #include <libslic3r/BranchingTree/PointCloud.hpp>
 
-using namespace Catch;
+using Catch::Approx;
 
 namespace {
 
