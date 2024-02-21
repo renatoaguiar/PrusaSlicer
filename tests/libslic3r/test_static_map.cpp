@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 #include <string_view>
 
 #include "libslic3r/StaticMap.hpp"

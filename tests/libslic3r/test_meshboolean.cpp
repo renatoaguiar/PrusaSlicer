@@ -1,10 +1,9 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 #include <test_utils.hpp>
 
 #include <libslic3r/TriangleMesh.hpp>
 #include <libslic3r/MeshBoolean.hpp>
 
-using Catch::Approx;
 using namespace Slic3r;
 
 TEST_CASE("CGAL and TriangleMesh conversions", "[MeshBoolean]") {

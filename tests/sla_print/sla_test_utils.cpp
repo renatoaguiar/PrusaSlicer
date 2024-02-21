@@ -6,8 +6,6 @@
 
 #include <iomanip>
 
-using Catch::Approx;
-
 void test_support_model_collision(
     const std::string            &obj_filename,
     const sla::SupportTreeConfig &input_supportcfg,

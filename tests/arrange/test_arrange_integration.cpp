@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 #include "test_utils.hpp"
 
 #include <libslic3r/Arrange/Arrange.hpp>
@@ -11,8 +11,6 @@
 #include "libslic3r/Geometry/ConvexHull.hpp"
 #include "libslic3r/Format/3mf.hpp"
 #include "libslic3r/ModelArrange.hpp"
-
-using Catch::Approx;
 
 static Slic3r::Model get_example_model_with_20mm_cube()
 {

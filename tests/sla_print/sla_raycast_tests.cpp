@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 #include <test_utils.hpp>
 
 #include <libslic3r/AABBMesh.hpp>
@@ -6,7 +6,6 @@
 
 #include "sla_test_utils.hpp"
 
-using Catch::Approx;
 using namespace Slic3r;
 
 // First do a simple test of the hole raycaster.

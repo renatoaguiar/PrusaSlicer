@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 
 #include "libslic3r/libslic3r.h"
 #include "libslic3r/Print.hpp"
@@ -6,7 +6,6 @@
 
 #include "test_data.hpp"
 
-using Catch::Approx;
 using namespace Slic3r;
 using namespace Slic3r::Test;
 

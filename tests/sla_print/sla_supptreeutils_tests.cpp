@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 #include <test_utils.hpp>
 
 #include <unordered_set>
@@ -6,8 +6,6 @@
 #include "libslic3r/Execution/ExecutionSeq.hpp"
 #include "libslic3r/SLA/SupportTreeUtils.hpp"
 #include "libslic3r/SLA/SupportTreeUtilsLegacy.hpp"
-
-using Catch::Approx;
 
 // Test pair hash for 'nums' random number pairs.
 template <class I, class II> void test_pairhash()

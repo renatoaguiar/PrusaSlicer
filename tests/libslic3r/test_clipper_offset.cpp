@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 
 #include <iostream>
 #include <boost/filesystem.hpp>
@@ -7,7 +7,6 @@
 #include "libslic3r/ExPolygon.hpp"
 #include "libslic3r/SVG.hpp"
 
-using Catch::Approx;
 using namespace Slic3r;
 
 // #define TESTS_EXPORT_SVGS

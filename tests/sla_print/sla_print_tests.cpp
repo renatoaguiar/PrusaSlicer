@@ -9,8 +9,6 @@
 #include <libslic3r/SLA/SupportTreeMesher.hpp>
 #include <libslic3r/BranchingTree/PointCloud.hpp>
 
-using Catch::Approx;
-
 namespace {
 
 const char *const BELOW_PAD_TEST_OBJECTS[] = {

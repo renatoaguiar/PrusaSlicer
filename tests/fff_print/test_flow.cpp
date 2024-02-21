@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 
 #include <numeric>
 #include <sstream>
@@ -10,7 +10,6 @@
 #include "libslic3r/Flow.hpp"
 #include "libslic3r/libslic3r.h"
 
-using Catch::Approx;
 using namespace Slic3r::Test;
 using namespace Slic3r;
 

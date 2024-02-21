@@ -1,4 +1,4 @@
-#include <catch2/catch_all.hpp>
+#include <catch2/catch.hpp>
 
 #include "libslic3r/GCodeReader.hpp"
 #include "libslic3r/Config.hpp"
@@ -8,7 +8,6 @@
 
 #include "test_data.hpp" // get access to init_print, etc
 
-using Catch::Approx;
 using namespace Slic3r::Test;
 using namespace Slic3r;
 
