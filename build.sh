@@ -8,6 +8,9 @@ mkdir -p build
 cd build
 touch .nobackup
 
+export CMAKE_CXX_COMPILER_LAUNCHER=ccache
+export CMAKE_C_COMPILER_LAUNCHER=ccache
+
 nice cmake .. \
      -DSLIC3R_GTK=3 \
      -DSLIC3R_PCH=OFF \
