@@ -66,7 +66,7 @@ TEST_CASE("Wiping speeds", "[GCode]") {
         INFO("Wipe moves don\'t retract faster than configured speed");
         CHECK(retract_speed < expected_retract_speed);
     }
-    INFO("No wiping after layer change")
+    INFO("No wiping after layer change");
     CHECK(!wiping_on_new_layer);
 }
 
