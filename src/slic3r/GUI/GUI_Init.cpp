@@ -45,9 +45,7 @@ int GUI_Run(GUI_InitParams &params)
     signal(SIGCHLD, SIG_DFL);
 #endif // __APPLE__
 
-#ifdef __OpenBSD__
     wxSizerFlags::DisableConsistencyChecks();
-#endif
 
     try {
         GUI::GUI_App* gui = new GUI::GUI_App(params.start_as_gcodeviewer ? GUI::GUI_App::EAppMode::GCodeViewer : GUI::GUI_App::EAppMode::Editor);

@@ -13,10 +13,6 @@
 	#endif // __APPLE__
 #endif
 
-#ifdef __OpenBSD__
-	#include <pthread_np.h>
-#endif
-
 #include <atomic>
 #include <condition_variable>
 #include <mutex>
@@ -169,6 +165,8 @@ std::optional<std::string> get_current_thread_name()
 }
 
 #elif __OpenBSD__
+
+#include <pthread_np.h>
 
 bool set_thread_name(std::thread &thread, const char *thread_name)
 {
