@@ -37,7 +37,7 @@ TEST_CASE("Parallel lines under angles", "[Line]") {
     CHECK(line.parallel_to(line.direction()));
     INFO("Line is parallel to its direction + PI");
     line.parallel_to(line.direction() + M_PI);
-    INFO("line is parallel to its direction - PI")
+    INFO("line is parallel to its direction - PI");
     line.parallel_to(line.direction() - M_PI);
 
     SECTION("Line is parallel within epsilon") {

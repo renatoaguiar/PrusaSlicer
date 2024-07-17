@@ -434,6 +434,9 @@ endforeach()
 
 encoding_check(libslic3r_gui)
 
+pkg_check_modules(HIDAPI REQUIRED hidapi-libusb)
+include_directories(${HIDAPI_INCLUDE_DIRS})
+
 target_link_libraries(
     libslic3r_gui
     PUBLIC
@@ -457,7 +460,7 @@ target_link_libraries(
 
 if (MSVC)
     target_link_libraries(libslic3r_gui PUBLIC Setupapi.lib)
-elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
     target_link_libraries(libslic3r_gui PUBLIC
         ${DBus1_LIBRARIES}
         OpenSSL::SSL
@@ -484,7 +487,7 @@ if (UNIX AND NOT APPLE)
     find_package(GTK${SLIC3R_GTK} REQUIRED)
     find_package(PkgConfig REQUIRED)
 
-    pkg_search_module(WEBKIT2GTK REQUIRED IMPORTED_TARGET webkit2gtk-4.0 webkit2gtk-4.1)
+    pkg_search_module(WEBKIT2GTK REQUIRED IMPORTED_TARGET webkit2gtk-4.1)
     target_link_libraries(libslic3r_gui PUBLIC ${GTK${SLIC3R_GTK}_LIBRARIES} fontconfig PkgConfig::WEBKIT2GTK)
 endif ()
 
