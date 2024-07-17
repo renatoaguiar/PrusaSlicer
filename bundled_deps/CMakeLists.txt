@@ -45,5 +45,4 @@ target_include_directories(tcbspan INTERFACE tcbspan)
 
 if (SLIC3R_GUI)
     add_subdirectory(imgui)
-    add_subdirectory(hidapi)
 endif ()

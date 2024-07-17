@@ -305,7 +305,7 @@ void desktop_open_folder(const boost::filesystem::path& path)
 #endif
 }
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__OpenBSD__)
 namespace {
 wxExecuteEnv get_appimage_exec_env()
 {

@@ -136,6 +136,8 @@ target_link_libraries(PrusaSlicer libslic3r_gui)
         target_link_libraries(PrusaSlicer ws2_32 uxtheme setupapi)
     elseif (APPLE)
         target_link_libraries(PrusaSlicer "-framework OpenGL")
+    elseif (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+        # no-op
     else ()
         target_link_libraries(PrusaSlicer -ldl)
     endif ()

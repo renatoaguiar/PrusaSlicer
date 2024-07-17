@@ -639,6 +639,7 @@ target_link_libraries(libslic3r PUBLIC
     libigl
     agg
     ankerl
+    boost_headeronly
 )
 
 if (APPLE)
