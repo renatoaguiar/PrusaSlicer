@@ -7,6 +7,10 @@
 
 #include <string>
 
+#if defined(OpenBSD)
+#undef OpenBSD
+#endif
+
 namespace Slic3r {
 
 enum class Platform

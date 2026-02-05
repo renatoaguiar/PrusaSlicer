@@ -13,6 +13,10 @@
 #include <mach/machine.h>
 #endif
 
+#if defined(OpenBSD)
+#undef OpenBSD
+#endif
+
 namespace Slic3r {
 
 static auto s_platform 		  = Platform::Uninitialized;
