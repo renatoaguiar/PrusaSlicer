@@ -42,7 +42,7 @@ LoadStepFn get_load_step_fn()
 #endif
 
     if (!load_step_fn) {
-        auto libpath = boost::dll::program_location().parent_path();
+        auto libpath = boost::filesystem::path(SLIC3R_FHS_LIBDIR);
 #ifdef _WIN32
         libpath /= "OCCTWrapper.dll";
         HMODULE module = LoadLibraryW(libpath.wstring().c_str());

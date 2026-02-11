@@ -204,7 +204,7 @@ static bool read(Data& data, int argc, const char* const argv[])
     return true;
 }
 
-static bool setup_common(char *program_name)
+static bool setup_common()
 {
     // Mark the main thread for the debugger and for runtime checks.
     set_current_thread_name("slic3r_main");
@@ -272,9 +272,11 @@ static bool setup_common(char *program_name)
     }
 #endif
 
+#ifndef SLIC3R_FHS
     // See Invoking prusa-slicer from $PATH environment variable crashes #5542
-    boost::filesystem::path path_to_binary = boost::filesystem::system_complete(program_name);
-    // boost::filesystem::path path_to_binary = boost::dll::program_location();
+    // boost::filesystem::path path_to_binary = boost::filesystem::system_complete(argv[0]);
+    boost::filesystem::path path_to_binary = boost::dll::program_location();
+#endif
 
     // Path from the Slic3r binary to its resources.
 #ifdef __APPLE__
@@ -308,7 +310,7 @@ static bool setup_common(char *program_name)
 
 bool setup(Data& cli, int argc, char** argv)
 {
-    if (!setup_common(argv[0]))
+    if (!setup_common())
         return false;
 
     if (!read(cli, argc, argv)) {
